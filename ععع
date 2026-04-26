@@ -1,0 +1,22 @@
+package com.loco.chat
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class RoomActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_room)
+
+        val roomId = intent.getStringExtra("roomId") ?: "room1"
+
+        AgoraManager.init(this)
+        AgoraManager.join(roomId)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        AgoraManager.leave()
+    }
+}

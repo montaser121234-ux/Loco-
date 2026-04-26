@@ -1,0 +1,71 @@
+loco-chat-app/
+│
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/loco/chat/
+│   │   │   ├── LoginActivity.kt
+│   │   │   ├── MainActivity.kt
+│   │   │   ├── RoomActivity.kt
+│   │   │   ├── AgoraManager.kt
+│   │   │   ├── FirebaseUtil.kt
+│   │   │
+│   │   ├── res/layout/
+│   │   │   ├── activity_login.xml
+│   │   │   ├── activity_main.xml
+│   │   │   ├── activity_room.xml
+│   │   │
+│   │   ├── AndroidManifest.xml
+│   │
+│   ├── google-services.json   ( {
+  "project_info": {
+    "project_number": "427219576432",
+    "project_id": "loco-chat-7320a",
+    "storage_bucket": "loco-chat-7320a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427219576432:android:2ad6069467cf04fe0836b5",
+        "android_client_info": {
+          "package_name": "com.loco.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAft4nZKzPIIHw-dx1Plv1MGCEsVnrraVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+})
+│
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+│
+└── .github/workflows/android.yml
+com.loco.chat
+│
+├── activities
+│   ├── LoginActivity.kt
+│   ├── MainActivity.kt
+│   ├── RoomActivity.kt
+│
+├── adapter
+│   ├── RoomAdapter.kt
+│
+├── model
+│   ├── Room.kt
+│
+├── firebase
+│   ├── FirebaseUtil.kt
+│
+└── agora
+    ├── AgoraManager.kt

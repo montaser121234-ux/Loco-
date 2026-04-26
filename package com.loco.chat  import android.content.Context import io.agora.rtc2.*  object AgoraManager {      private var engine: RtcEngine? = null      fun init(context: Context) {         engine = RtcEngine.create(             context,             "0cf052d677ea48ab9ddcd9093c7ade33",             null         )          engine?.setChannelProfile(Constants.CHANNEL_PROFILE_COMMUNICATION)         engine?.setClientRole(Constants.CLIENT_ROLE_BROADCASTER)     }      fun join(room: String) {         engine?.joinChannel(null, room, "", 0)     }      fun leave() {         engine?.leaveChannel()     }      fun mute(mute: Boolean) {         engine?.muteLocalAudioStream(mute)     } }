@@ -1,0 +1,32 @@
+package com.loco.chat
+
+import android.content.Context
+import io.agora.rtc2.*
+
+object AgoraManager {
+
+    private var engine: RtcEngine? = null
+
+    fun init(context: Context) {
+        engine = RtcEngine.create(
+            context,
+            "0cf052d677ea48ab9ddcd9093c7ade33",
+            null
+        )
+
+        engine?.setChannelProfile(Constants.CHANNEL_PROFILE_COMMUNICATION)
+        engine?.setClientRole(Constants.CLIENT_ROLE_BROADCASTER)
+    }
+
+    fun join(room: String) {
+        engine?.joinChannel(null, room, "", 0)
+    }
+
+    fun leave() {
+        engine?.leaveChannel()
+    }
+
+    fun mute(mute: Boolean) {
+        engine?.muteLocalAudioStream(mute)
+    }
+}

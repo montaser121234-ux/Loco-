@@ -1,0 +1,18 @@
+package com.loco.chat
+
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+
+object FirebaseUtil {
+
+    val auth = FirebaseAuth.getInstance()
+    val db = FirebaseFirestore.getInstance()
+
+    fun createRoom(name: String) {
+        val room = hashMapOf(
+            "name" to name,
+            "users" to 1
+        )
+        db.collection("rooms").add(room)
+    }
+}
